@@ -4,7 +4,7 @@ const answear = document.getElementById("answear");
 let attempt = 0;
 
 const random = Math.floor(Math.random() * 100 + 1);
-console.log(random);
+//console.log(random);
 
 function check() {
 
