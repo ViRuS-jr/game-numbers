@@ -1,0 +1,21 @@
+.container {
+    background-color: green;
+    display: flex; /* flex, inline-flex */
+    flex-direction: row; /* row, row-reverse, column, column-reverse */
+    flex-wrap: wrap; /* wrap, nowrap, wrap-reverse */
+    justify-content: center; /* main axis */
+    align-items: stretch; /* only works if flex-wrap is set to wrap */
+    align-content: stretch; /* only works if flex-wrap is set to wrap */
+   /* height: 100%; */ /* wypelnia strone */
+    text-align: center; 
+}
+
+.welcome {
+    background-color: coral;
+    flex: 1 0 100%;
+}
+
+.answear {
+    background-color: yellow;
+    flex: 1 0 100%;
+}
