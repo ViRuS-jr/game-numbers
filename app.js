@@ -13,11 +13,15 @@ function check() {
 
         if (number.value == random) {
             const message = document.createElement("h1");
+            const reset = document.createElement("button");
             message.textContent = "CONGRATULATIONS!!! YOU WON";
             answear.appendChild(message);
             answear.innerHTML += `<p>It took ${attempt} tries!</p>`
             button.textContent = "Try Again";
             button.onclick = reload;
+            reset.onclick = reload;
+            reset.textContent = "Try Again";
+            answear.appendChild(reset);
         }
         else if (number.value < random) {
             const message = document.createElement("p");
@@ -32,11 +36,18 @@ function check() {
     } else {
         answear.innerHTML += `<h2>Enter the correct number</h2> `
     }
-
+    number.select();
 }
+
 
 button.onclick = check;
 
 function reload() {
     location.reload();
 }
+
+number.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        check();
+    }
+});
