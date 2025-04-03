@@ -2,11 +2,15 @@ const number = document.getElementById("number");
 const button = document.getElementById("button");
 const answear = document.getElementById("answear");
 let attempt = 0;
-
+// add delay for safari browser :-/
 document.addEventListener('DOMContentLoaded', function() {
-    number.focus();
+    setTimeout(function() {
+        const numberInput = document.getElementById('number');
+        if (numberInput) {
+            numberInput.focus();
+        }
+    }, 50); // delay to 50ms
 });
-
 const random = Math.floor(Math.random() * 100 + 1);
 //console.log(random);
 
