@@ -22,6 +22,7 @@ function check() {
             reset.onclick = reload;
             reset.textContent = "Try Again";
             answear.appendChild(reset);
+            number.addEventListener('keypress', enterReload);
         }
         else if (number.value < random) {
             const message = document.createElement("p");
@@ -46,8 +47,16 @@ function reload() {
     location.reload();
 }
 
-number.addEventListener('keypress', function(event) {
+function enterCheck(event) {
     if (event.key === 'Enter') {
         check();
     }
-});
+}
+
+function enterReload(event) {
+    if (event.key === 'Enter') {
+        reload();
+    }
+}
+
+number.addEventListener('keypress', enterCheck);
