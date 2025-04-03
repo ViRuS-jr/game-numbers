@@ -16,27 +16,30 @@ function check() {
         attempt++
 
         if (number.value == random) {
+            const firstChild = answear.firstChild;
             const message = document.createElement("h1");
             const reset = document.createElement("button");
             message.textContent = "CONGRATULATIONS!!! YOU WON";
-            answear.appendChild(message);
-            answear.innerHTML += `<p>It took ${attempt} tries!</p>`
+            message.innerHTML += `<p>It took ${attempt} tries!</p>`
+            answear.insertBefore(message, firstChild);
             button.textContent = "Try Again";
             button.onclick = reload;
             reset.onclick = reload;
             reset.textContent = "Try Again";
-            answear.appendChild(reset);
+            message.appendChild(reset);
             number.addEventListener('keypress', enterReload);
         }
         else if (number.value < random) {
+            const firstChild = answear.firstChild;
             const message = document.createElement("p");
             message.textContent = number.value + " - is not enough!";
-            answear.appendChild(message);
+            answear.insertBefore(message, firstChild);
         }
         else if (number.value > random) {
+            const firstChild = answear.firstChild;
             const message = document.createElement("p");
             message.textContent = number.value + " - is too high";
-            answear.appendChild(message);
+            answear.insertBefore(message, firstChild);
         }
     } else {
         answear.innerHTML += `<h2>Enter the correct number</h2> `
