@@ -3,6 +3,10 @@ const button = document.getElementById("button");
 const answear = document.getElementById("answear");
 let attempt = 0;
 
+document.addEventListener('DOMContentLoaded', function() {
+    number.focus();
+});
+
 const random = Math.floor(Math.random() * 100 + 1);
 //console.log(random);
 
