@@ -24,7 +24,11 @@ function check() {
             const message = document.createElement("h1");
             const reset = document.createElement("button");
             message.innerHTML = `<p>CONGRATULATIONS!!! <br> YOU WON <br> ---- ${random} ----</p>`;
+            if (attempt === 1) {
+                message.innerHTML += `<p>It took ${attempt} try!</p>`
+            }else{
             message.innerHTML += `<p>It took ${attempt} tries!</p>`
+            }
             answear.insertBefore(message, firstChild);
             number.value = "";
             button.textContent = "Try Again";
