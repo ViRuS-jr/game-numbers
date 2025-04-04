@@ -23,9 +23,10 @@ function check() {
             const firstChild = answear.firstChild;
             const message = document.createElement("h1");
             const reset = document.createElement("button");
-            message.textContent = "CONGRATULATIONS!!! YOU WON";
+            message.innerHTML = `<p>CONGRATULATIONS!!! <br> YOU WON <br> ---- ${random} ----</p>`;
             message.innerHTML += `<p>It took ${attempt} tries!</p>`
             answear.insertBefore(message, firstChild);
+            number.value = "";
             button.textContent = "Try Again";
             button.onclick = reload;
             reset.onclick = reload;
@@ -36,15 +37,17 @@ function check() {
         else if (number.value < random) {
             const firstChild = answear.firstChild;
             const message = document.createElement("p");
-            message.textContent = number.value + " - is not enough!";
+            message.textContent = attempt + ":   " + number.value + " - is not enough!";
             answear.insertBefore(message, firstChild);
         }
         else if (number.value > random) {
             const firstChild = answear.firstChild;
             const message = document.createElement("p");
-            message.textContent = number.value + " - is too high";
+            message.textContent = attempt + ":   " + number.value + " - is too high!";
             answear.insertBefore(message, firstChild);
         }
+    } else if (number.value === ""){ //dodane doesn't show double win meessage just before reload the page
+
     } else {
         answear.innerHTML += `<h2>Enter the correct number</h2> `
     }
