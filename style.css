@@ -17,5 +17,20 @@
 
 .answear {
     background-color: yellow;
+    flex: 15 0 80%;
+}
+
+.leftPanel{
+    background-color: purple;
+    flex: 1 0 20%;
+}
+
+.results{
+    background-color: purple;
+    flex: 1 0 100%;
+}
+
+.listReset{
+    background-color: purple;
     flex: 1 0 100%;
 }
