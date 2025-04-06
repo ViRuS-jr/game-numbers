@@ -4,11 +4,24 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
 </head>
 
 <body>
    
     <div class="container">
+        
+        <button id="settingsButton">⚙</button>
+        
+        <div id="settingsModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Settings</h2>
+                <label for="playerName">Your Name:</label>
+                <input type="text" id="playerName" placeholder="Name">
+                <button id="saveNameButton">Save</button>
+            </div>
+        </div>
+
         <div class="welcome">
             <h1>Welcome!</h1>
             <h2>I came up with a number, guess what:

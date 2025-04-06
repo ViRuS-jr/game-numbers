@@ -94,7 +94,8 @@ number.addEventListener('keypress', enterCheck);
 function addWinner() {
 
     //add winner to score list
-    topTen.push({ name: "Won", score: attempt })
+    const savedName = localStorage.getItem("playerName") || "Won";
+    topTen.push({ name: savedName, score: attempt });
 
     //sort
     topTen.sort(function (a, b) {
@@ -127,3 +128,28 @@ function listReset() {
 }
 
 resBut.onclick = listReset;
+
+// Settings and Name 
+const settingsButton = document.getElementById("settingsButton");
+const settingsModal = document.getElementById("settingsModal");
+const playerNameInput = document.getElementById("playerName");
+const saveNameButton = document.getElementById("saveNameButton");
+
+settingsButton.onclick = () => {
+    settingsModal.classList.remove("hidden");
+    playerNameInput.value = localStorage.getItem("playerName") || "";
+};
+
+saveNameButton.onclick = () => {
+    const name = playerNameInput.value.trim();
+    if (name !== "") {
+        localStorage.setItem("playerName", name);
+        settingsModal.classList.add("hidden");
+    }
+};
+
+window.addEventListener("click", (e) => {
+    if (e.target === settingsModal) {
+        settingsModal.classList.add("hidden");
+    }
+});
