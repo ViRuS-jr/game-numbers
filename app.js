@@ -33,7 +33,7 @@ function check() {
 
         if (number.value == random) {
             const firstChild = answear.firstChild;
-            const message = document.createElement("h1");
+            const message = document.createElement("h2");
             const reset = document.createElement("button");
             message.innerHTML = `<p>CONGRATULATIONS!!! <br> YOU WON <br> ---- ${random} ----</p>`;
             if (attempt === 1) {
@@ -105,7 +105,7 @@ function addWinner() {
     topTen.length = 10;
 
     //save table in localstorage
-    localStorage.setItem("topTen", JSON.stringify(topTen)) || [];//----------------------------------
+    localStorage.setItem("topTen", JSON.stringify(topTen)) || [];
 
     //display on the winnings board page
     let counter = 0;
