@@ -52,6 +52,7 @@ h1, h2, p {
 }
 
 #answear, #results {
+    margin: 20px auto; 
     width: 100%;
     max-width: 400px;
     margin-top: 20px;
