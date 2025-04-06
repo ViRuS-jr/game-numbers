@@ -111,7 +111,7 @@ function addWinner() {
     let counter = 0;
     results.innerHTML = `<h1>TOP 10</h1>`;
     topTen.forEach(person => {
-        console.log(`${counter}: ${person.name} : ${person.score}`);
+        //console.log(`${counter}: ${person.name} : ${person.score}`);
         counter++
         results.innerHTML += `<p>${counter}. ${person.name} in ${person.score}</p>`
     });
