@@ -3,6 +3,7 @@
 /* Global settings */
 * {
     box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
 }
 
 html, body {
