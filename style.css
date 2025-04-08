@@ -158,14 +158,14 @@ h1, h2, p {
 }
 
 #saveNameButton {
-    font-size: 1rem;
-    padding: 8px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    padding: 1px 14px;
     margin: 10px auto;
     background-color: #000;
     color: #00ff00;
     border: 4px solid #00ff00;
     cursor: pointer;
-    width: 20%;
     max-width: 150px;
     text-transform: uppercase;
 }
