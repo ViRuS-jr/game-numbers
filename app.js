@@ -134,6 +134,7 @@ const settingsButton = document.getElementById("settingsButton");
 const settingsModal = document.getElementById("settingsModal");
 const playerNameInput = document.getElementById("playerName");
 const saveNameButton = document.getElementById("saveNameButton");
+const closeSettings = document.getElementById("closeSettings");
 
 settingsButton.onclick = () => {
     settingsModal.classList.remove("hidden");
@@ -148,8 +149,15 @@ saveNameButton.onclick = () => {
     }
 };
 
-window.addEventListener("click", (e) => {
+function closeModalIfClickedOutside(e) {
     if (e.target === settingsModal) {
         settingsModal.classList.add("hidden");
     }
+}
+
+window.addEventListener("click", closeModalIfClickedOutside);
+window.addEventListener("touchstart", closeModalIfClickedOutside); // For Safari on Iphone
+
+closeSettings.addEventListener("click", () => {
+    settingsModal.classList.add("hidden");
 });
