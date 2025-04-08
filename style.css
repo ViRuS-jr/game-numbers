@@ -136,7 +136,16 @@ h1, h2, p {
     display: none;
 }
 
+.name-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* gap between input and save button */
+    flex-wrap: wrap; /* for very small screen */
+}
+
 #playerName {
+    flex: 1; /* take possible big space */
     font-size: 1rem;
     margin: 10px 0;
     padding: 10px;
@@ -145,6 +154,23 @@ h1, h2, p {
     background-color: #000;
     color: #00ff00;
     border: 2px solid #00ff00;
+}
+
+#saveNameButton {
+    font-size: 1rem;
+    padding: 8px;
+    margin: 10px auto;
+    background-color: #000;
+    color: #00ff00;
+    border: 4px solid #00ff00;
+    cursor: pointer;
+    width: 20%;
+    max-width: 150px;
+    text-transform: uppercase;
+}
+
+#saveNameButton:hover {
+    background-color: #111;
 }
 
 .close-button {
